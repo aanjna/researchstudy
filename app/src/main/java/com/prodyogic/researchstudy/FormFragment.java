@@ -34,7 +34,7 @@ public class FormFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         // Defines the xml file for the fragment
         View v = inflater.inflate(R.layout.fragment_form, parent, false);
 
@@ -63,7 +63,6 @@ public class FormFragment extends Fragment {
                     Toast.makeText(getActivity(), "Oh no! " + description, Toast.LENGTH_SHORT).show();
                     alertDialog.setTitle("Error");
                     alertDialog.setMessage(description);
-
                     alertDialog.show();
                 }
             });
