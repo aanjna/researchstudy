@@ -1,22 +1,25 @@
 package com.prodyogic.researchstudy;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState == null) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.your_placeholder, new FormFragment());
-            ft.commit();
-
-        }
+        Button btn = (Button) findViewById(R.id.btn);
+        btn.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+
+        startActivity(new Intent(this, WebActivity.class));
+    }
 }

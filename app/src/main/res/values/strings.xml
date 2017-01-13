@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">researchstudy</string>
+    <string name="app_web">survey</string>
+    <string name="btn">press the button for survey</string>
 </resources>
